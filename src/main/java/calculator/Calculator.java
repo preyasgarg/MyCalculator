@@ -18,8 +18,9 @@ public class Calculator {
         double number1, number2;
         do {
             System.out.println("Calculator-DevOps, Choose to perform operation");
-            System.out.print("Press 1 to find factorial\nPress 2 to find Square root\nPress 3 to find power\nPress 4 to find natural logarithm\n" +
-                    "Press 5 to exit\nEnter your choice: ");
+            System.out.print("Press 1 to find factorial\nPress 2 to find Square root\nPress 3 to find power\nPress 4 to find natural logarithm\n"
+                    +
+                    "Press 5 to find sum\nPress 6 to find difference\nPress 7 to find multiplication\nPress 8 to find division\nPress 9 to exit\nEnter your choice: ");
             int choice;
             try {
                 choice = scanner.nextInt();
@@ -60,7 +61,42 @@ public class Calculator {
                     number1 = scanner.nextDouble();
                     System.out.println("Natural log of "+number1+" is : " + calculator.naturalLog(number1));
                     System.out.println("\n");
-
+                    break;
+                case 5:
+                    // find sum
+                    System.out.print("Enter the first number : ");
+                    number1 = scanner.nextDouble();
+                    System.out.print("Enter the second number : ");
+                    number2 = scanner.nextDouble();
+                    System.out.println(number1+ " + " + number2+" is : " + calculator.addition(number1, number2));
+                    System.out.println("\n");
+                    break;
+                case 6:
+                    // find sum
+                    System.out.print("Enter the first number : ");
+                    number1 = scanner.nextDouble();
+                    System.out.print("Enter the second number : ");
+                    number2 = scanner.nextDouble();
+                    System.out.println(number1+ " - " + number2+" is : " + calculator.subtraction(number1, number2));
+                    System.out.println("\n");
+                    break;
+                case 7:
+                    // find sum
+                    System.out.print("Enter the first number : ");
+                    number1 = scanner.nextDouble();
+                    System.out.print("Enter the second number : ");
+                    number2 = scanner.nextDouble();
+                    System.out.println(number1+ " * " + number2+" is : " + calculator.multiplication(number1, number2));
+                    System.out.println("\n");
+                    break;
+                case 8:
+                    // find sum
+                    System.out.print("Enter the first number : ");
+                    number1 = scanner.nextDouble();
+                    System.out.print("Enter the second number : ");
+                    number2 = scanner.nextDouble();
+                    System.out.println(number1+ " / " + number2+" is : " + calculator.division(number1, number2));
+                    System.out.println("\n");
                     break;
                 default:
                     System.out.println("Exiting....");
@@ -69,6 +105,34 @@ public class Calculator {
         } while (true);
     }
 
+
+    public double addition(double number1, double number2) {
+        logger.info("[ADDITION - " + number1 + " SUMMED WITH] " + number2);
+        double result = number1+number2;
+        logger.info("[RESULT - SUM] - " + result);
+        return result;
+    }
+
+    public double subtraction(double number1, double number2) {
+        logger.info("[SUBTRACTION - " + number1 + " REDUCES BY] " + number2);
+        double result = number1-number2;
+        logger.info("[RESULT - DIFFERENCE] - " + result);
+        return result;
+    }
+
+    public double division(double number1, double number2) {
+        logger.info("[DIVISION - " + number1 + " DIVIDED BY] " + number2);
+        double result = number1/number2;
+        logger.info("[RESULT - DIVISION] - " + result);
+        return result;
+    }
+
+    public double multiplication(double number1, double number2) {
+        logger.info("[DIVISION - " + number1 + " MULTIPLIED BY] " + number2);
+        double result = number1*number2;
+        logger.info("[RESULT - MULTIPLICATION] - " + result);
+        return result;
+    }
 
     public double factoral(double number1) {
         logger.info("[FACTORIAL] - " + number1);
