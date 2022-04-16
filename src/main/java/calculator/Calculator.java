@@ -72,7 +72,7 @@ public class Calculator {
                     System.out.println("\n");
                     break;
                 case 6:
-                    // find sum
+                    // find diff
                     System.out.print("Enter the first number : ");
                     number1 = scanner.nextDouble();
                     System.out.print("Enter the second number : ");
@@ -81,7 +81,7 @@ public class Calculator {
                     System.out.println("\n");
                     break;
                 case 7:
-                    // find sum
+                    // find product
                     System.out.print("Enter the first number : ");
                     number1 = scanner.nextDouble();
                     System.out.print("Enter the second number : ");
@@ -90,7 +90,7 @@ public class Calculator {
                     System.out.println("\n");
                     break;
                 case 8:
-                    // find sum
+                    // find division
                     System.out.print("Enter the first number : ");
                     number1 = scanner.nextDouble();
                     System.out.print("Enter the second number : ");
