@@ -79,6 +79,7 @@ public class Calculator {
                     number2 = scanner.nextDouble();
                     System.out.println(number1+ " - " + number2+" is : " + calculator.subtraction(number1, number2));
                     System.out.println("\n");
+                    
                     break;
                 case 7:
                     // find product
